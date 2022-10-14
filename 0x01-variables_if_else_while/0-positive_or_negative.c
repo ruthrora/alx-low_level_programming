@@ -1,26 +1,25 @@
+#include <stdlib.h>
+#include <time.h>
 #include <stdio.h>
-
 /**
- * main - prints if number is positive, zero, negative
- *
- *Return: Always 0
+ * main - prints if Number is positive , zero , or negative
+ * Return: 0
  */
 int main(void)
 {
 	int n;
-	
 	if (n > 0)
 	{
-	printf("%d is positive\n",n);
+		printf("%d is positive\n",n);
 	}
 	else if (n == 0)
 	{
-	printf("%d is zer\n",n);
+		printf("%d is zero\n",n);
 	}
 	else
 	{
-	printf("%d is negative\n",n);
+		printf("%D is negative\n",n);
 	}
-return (0)
-}	
+	return (0);
+}
 
