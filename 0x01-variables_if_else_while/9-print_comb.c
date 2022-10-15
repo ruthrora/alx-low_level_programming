@@ -1,24 +1,27 @@
 #include <stdio.h>
-
+#include <unistd.h>
 /**
  * main - prints all possible combinations of single-digit numbers
  *
- * Return: Always 0
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int n = '0';
+	int a;
 
-	while (n <= '9')
+	for (a = '0'; a <= '9'; a++)
 	{
-		putchart(n);
-		if (n < '9')
+		putchar(a);
+
+		if (a != '9')
 		{
 			putchar(',');
 			putchar(' ');
+
 		}
-		n++;
+
 	}
+
 	putchar('\n');
 	return (0);
 }
