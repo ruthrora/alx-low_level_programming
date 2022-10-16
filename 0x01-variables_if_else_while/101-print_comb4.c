@@ -3,28 +3,26 @@
 /**
  * main - prints all possible different combinations of three digits.
  *
- * Return: Always (Success)
- *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int a;
-	int b;
-	int c;
+	int x;
+	int y;
+	int z;
 
-	for (a = '0'; a <= '10'; a++)
+	for (x = 28; x < 38; x++)
 	{
-		for (b = '0'; b <= '10'; b++)
+		for (y = 29; y < 38; y++)
 		{
-			for (c = '0'; c <= '10'; c++)
+			for (z = 30; z < 38; z++)
 			{
-				if (a < b && b < c)
+				if (z > y && y > x)
 				{
-					putchar(a);
-					putchar(b);
-					putchar(c);
-
-					if (a != '7')
+					putchar(x);
+					putchar(y);
+					putchar(z);
+					if (x != 35 || y != 36)
 					{
 						putchar(',');
 						putchar(' ');
@@ -37,8 +35,6 @@ int main(void)
 		}
 
 	}
-	putchar('\n');
+	putchaar('\n');
 	return (0);
 }
-
-
