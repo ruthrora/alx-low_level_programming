@@ -7,22 +7,20 @@
  */
 int main(void)
 {
-	int x;
-	int y;
-	int z;
+	int x, y, z;
 
-	for (x = 28; x < 38; x++)
+	for (x = 48; x < 58; x++)
 	{
-		for (y = 29; y < 38; y++)
+		for (y = 49; y < 58; y++)
 		{
-			for (z = 30; z < 38; z++)
+			for (z = 50; z < 58; z++)
 			{
 				if (z > y && y > x)
 				{
 					putchar(x);
 					putchar(y);
 					putchar(z);
-					if (x != 35 || y != 36)
+					if (x != 55 || y != 56)
 					{
 						putchar(',');
 						putchar(' ');
