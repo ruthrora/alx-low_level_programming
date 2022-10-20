@@ -3,9 +3,22 @@
 /**
  * _isupper - function that checks for uppercase character
  * @c: character to check
- * Return: 1 if c is uppercase , 0 else
+ * Return: 1 if c is uppercase, return 0 otherwise
  */
 int _isupper(int c)
 {
-	return (c >= 'A' && c <= 'Z');
+	int i;
+
+	for (i = 65; i <= 90; i++)
+	{
+		if (i == c)
+		{
+			return (1);
+
+		}
+
+	}
+	return (0);
 }
+	
+
