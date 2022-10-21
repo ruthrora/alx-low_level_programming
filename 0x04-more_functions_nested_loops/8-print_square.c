@@ -2,25 +2,25 @@
 
 /**
  * print_square -  prints a square, followed by a new line
- * @S: Number of square of times
+ * @size: Number of square of times
  *
  * Return: Always 0
  */
-void print_square(int S)
+void print_square(int size)
 {
-	int a, b;
+	int x, y;
 
-	if (S <= 0)
+	if (size <= 0)
 	{
 		_putchar('\n');
 	}
 	else
 	{
-		for (a = 0; a < S; a++)
+		for (x = 0; x < size; x++)
 		{
-			for (b = 0; b < S; b++)
+			for (y = 0; y < size; y++)
 			{
-				_putchar(55);
+				_putchar('#');
 			}
 			_putchar('\n');
 		}
