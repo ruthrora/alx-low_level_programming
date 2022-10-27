@@ -5,15 +5,21 @@
  * @dest: String to copy to
  * @src: String to copy from
  * @n: Number of bytes
- * Return: Always 0 (Success)
+ * Return: Pointer to the resulting string
  */
 char *_strncat(char *dest, char *src, int n)
 {
 	int i = 0, cp = 0;
 
-	while (dest[i++])
-		cp++;
-	for (i = 0; src[i] && i < n; i++)
-		dest[cp] = src[i];
-	return (0);
+	for (i = 0; dest[i] != '\0'; i++)
+	{
+	}
+
+	for (cp = 0; cp < n; cp++)
+	{
+		dest[i + cp] = src[cp];
+		if (src[cp] == '\0')
+			cp = n;
+	}
+	return (dest);
 }
