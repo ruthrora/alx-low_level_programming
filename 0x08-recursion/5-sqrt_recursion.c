@@ -1,20 +1,20 @@
 #include "main.h"
 
 /**
- * sqrt2 - functions to evaluate from 1 to n
+ * sqroot - functions to evaluate from 1 to n
  * @a: values as n
  * @b: iterates
  *
  * Return: Always 0 (Success)
  */
-int sqrt2(int a, int b)
+int sqroot(int a, int b)
 {
-	if (b * b == a)
+	if (b < 1)
+		return (-1);
+	else if (b * b == a)
 		return (b);
 
-	if (b * b > a)
-		return (-1);
-	return (sqrt(a, b + 1));
+	return (sqroot(a, b - 1));
 }
 /**
  * _sqrt_recursion -  returns the natural square root of a number
@@ -24,6 +24,12 @@ int sqrt2(int a, int b)
  */
 int _sqrt_recursion(int n)
 {
-	return (sqrt2(n, 1));
+	if (n < 0)
+
+	return (-1);
+
+	else
+		return (sqroot(n, (n + 1) / 2));
+
 }
 
