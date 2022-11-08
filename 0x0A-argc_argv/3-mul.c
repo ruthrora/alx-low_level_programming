@@ -1,5 +1,5 @@
-#include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main -  multiplies two numbers.
@@ -10,14 +10,19 @@
 int main(int argc, char *argv[])
 {
 
-	int num1, num2, product;
+	int num1 = argc - 1, num2 = num1 - 1, product;
 
-	printf("Enter two numbers:");
-
-	scanf("%d %d, &num1, &num2);
-	product = num1 * num2;
-
-	printf("product of two numbers : %d " , product);
+	if (num1 == 2)
+	{
+		product = atoi(argv[num1]) * atoi(argv[num2]);
+		printf("%d\n", product);
+	}
+	else
+	{
+		printf("Error\n");
+		return (1);
+	}
 
 	return (0);
 }
+

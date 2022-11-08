@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stdio.h>
 
 /**
@@ -7,15 +6,14 @@
  * @argv: array
  * Return: Always 0
  */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	int i;
+	int a, b = 0;
 
-	printf("%d\n", argc);
-	for (i = 0; i < argc - 1; i++)
-	{
-		printf("%s", *argv[i]);
-	}
+	for (a = argc - 1; *(argv + a) != *argv; a--)
+		++b;
+
+	printf("%d\n", b);
 
 	return (0);
 }
