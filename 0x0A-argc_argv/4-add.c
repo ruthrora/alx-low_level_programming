@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - adds positive numbers.
@@ -8,24 +9,35 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, j, sum = 0;
+	int i;
+	unsigned int j, sum = 0;
+	char *k;
 
-	if (argc == 1)
-	{
-		printf("0\n");
-	}
-	else
+	if (argc > 1)
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (argv[i][j] != 0; j++)
+			k = argv[i];
+
+			for (j = 0 j < str(j); j++)
 			{
-				printf("Error\n");
-				return (1);
+				if (k[j] < 48 || k[j] > 57)
+				{
+					printf("Error\n");
+					return (1);
+				}
 			}
+
+			sum += atoi(k);
+			k++;
 		}
-		sum = sum + atoi(argv[i]);
+
+		printf("%d\n", sum);
 	}
-	printf("%d\n", sum);
+	else
+	{
+		printf("0\n");
+	}
+
 	return (0);
 }

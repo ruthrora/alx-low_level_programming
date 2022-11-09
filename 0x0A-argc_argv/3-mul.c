@@ -10,12 +10,14 @@
 int main(int argc, char *argv[])
 {
 
-	int num1 = argc - 1, num2 = num1 - 1, product;
+	int num1 = 0, num2 = 0;
 
-	if (num1 == 2)
+	if (argc == 3)
 	{
-		product = atoi(argv[num1]) * atoi(argv[num2]);
-		printf("%d\n", product);
+		num1 = atoi(argv[1]);
+		num2 = atoi(argv[2]);
+
+		printf("%d\n, num1 * num2);
 	}
 	else
 	{

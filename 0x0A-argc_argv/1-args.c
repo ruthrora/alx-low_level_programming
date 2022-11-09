@@ -8,12 +8,7 @@
  */
 int main(int argc, char **argv)
 {
-	int a, b = 0;
-
-	for (a = argc - 1; *(argv + a) != *argv; a--)
-		++b;
-
-	printf("%d\n", b);
-
+	(void) argv;
+	printf("%d\n", argc - 1);
 	return (0);
 }
