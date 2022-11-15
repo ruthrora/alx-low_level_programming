@@ -1,5 +1,4 @@
 #include <stdio.h>
-#define FILE_H
 
 /**
  * main - prints the name of the file it was compiled from
@@ -8,10 +7,10 @@
  */
 int main(void)
 {
-
-#ifndef FILE_H
+	char *filename = _FILE_;
 
 	printf("%s\n", _FILE_);
-#endif
+
 	return (0);
 }
+
