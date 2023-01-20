@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -shared -o libdynamic.so main.h *.o
+gcc -shared -o libdynamic.so *.o
